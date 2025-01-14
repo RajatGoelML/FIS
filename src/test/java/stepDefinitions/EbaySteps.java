@@ -54,6 +54,13 @@ public class EbaySteps {
 
 	}
 
+	@Then("user validate the cart image is updated")
+	public void user_validate_the_cart_image_is_updated() {
+		Assert.assertEquals(ebayPage.cartImage(),"1","cart image is not updated properly");
+
+	}
+
+
 	@Then("user verifies the cart has been updated")
 	public void user_verifies_the_cart_has_been_updated() {
 

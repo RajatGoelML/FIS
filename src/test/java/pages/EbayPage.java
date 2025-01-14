@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class EbayPage extends BasePage {
 
@@ -35,6 +36,9 @@ public class EbayPage extends BasePage {
 	private WebElement cartPageHeading;
 
 
+	@FindBy (xpath="//i[@id='gh-cart-n']")
+	private WebElement cartImage;
+
 	// Method to enter text in the search field
 	public void enterSearchText(String text) {
 		searchField.clear();
@@ -58,6 +62,11 @@ public class EbayPage extends BasePage {
 	// Method to click on the "Add to Cart" link
 	public void clickAddToCart() {
 		addToCartLink.click();
+	}
+
+	public String cartImage(){
+		String cartValue = (cartImage.getText());
+		return cartValue;
 	}
 
 	// Method to select a quantity from the dropdown

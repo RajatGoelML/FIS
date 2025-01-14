@@ -6,4 +6,4 @@ Feature: Ebay Application add to cart functionality
     And User clicks on the link
     And User clicks on AddToCart button
     And users verifies that the checkout page is visible
-    Then user verifies the cart has been updated
+    Then user validate the cart image is updated
